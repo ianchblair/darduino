@@ -38,4 +38,7 @@ RUN (wget -q -O- https://downloads.arduino.cc/arduino-${ARDUINO_IDE_VERSION}-lin
 
 ENV DISPLAY :1.0
 
+RUN apt-get update \
+    && apt-get install -y git libcanberra-gtk-module libcanberra-gtk3-module
+    
 USER developer
